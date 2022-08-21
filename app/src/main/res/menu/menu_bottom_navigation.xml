@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/menu_search_countries"
-        android:icon="@drawable/ic_search"
-        android:title="Search" />
+    android:id="@+id/menu_profile"
+    android:icon="@drawable/ic_account"
+    android:title="Profile" />
 
     <item
         android:id="@+id/menu_home"
@@ -12,8 +12,9 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/menu_internet"
-        android:icon="@drawable/ic_internet"
-        android:title="Internet" />
+        android:id="@+id/menu_search_countries"
+        android:icon="@drawable/ic_search"
+        android:title="Search" />
+
 
 </menu>

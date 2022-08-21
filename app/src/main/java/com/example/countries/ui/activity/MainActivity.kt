@@ -9,6 +9,7 @@ import com.example.countries.R
 import com.example.countries.databinding.ActivityMainBinding
 import com.example.countries.ui.fragments.HomeFragment
 import com.example.countries.ui.fragments.InternetFragment
+import com.example.countries.ui.fragments.ProfileFragment
 import com.example.countries.ui.fragments.SearchFragment
 
 class MainActivity : AppCompatActivity() {
@@ -35,11 +36,9 @@ class MainActivity : AppCompatActivity() {
 
             when (it.itemId) {
 
-                R.id.menu_profile -> {
-                    Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
+                R.id.menu_internet -> {
+                    Toast.makeText(this, "Internet", Toast.LENGTH_SHORT).show()
                 }
-
-                // -----------------
 
                 R.id.menu_companies -> {
                     Toast.makeText(this, "Companies", Toast.LENGTH_SHORT).show()
@@ -69,8 +68,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.menu_home -> {
                     replaceFragment(HomeFragment())
                 }
-                R.id.menu_internet -> {
-                    replaceFragment(InternetFragment())
+
+                R.id.menu_profile -> {
+                    replaceFragment(ProfileFragment())
                 }
 
             }
@@ -79,7 +79,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bottomNavigationMain.setOnItemReselectedListener {  } // cancel reselect
-
     }
 
     fun replaceFragment(fragment: Fragment) {
@@ -93,8 +92,8 @@ class MainActivity : AppCompatActivity() {
 
     fun firstRun() {
 
-        replaceFragment( HomeFragment() )
-        binding.bottomNavigationMain.selectedItemId = R.id.menu_home
+        replaceFragment( ProfileFragment() )
+        binding.bottomNavigationMain.selectedItemId = R.id.menu_profile
 
     }
 
