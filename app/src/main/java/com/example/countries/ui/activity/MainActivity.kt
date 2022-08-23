@@ -78,23 +78,19 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        binding.bottomNavigationMain.setOnItemReselectedListener {  } // cancel reselect
+        binding.bottomNavigationMain.setOnItemReselectedListener {  } // cancel reselect items
     }
 
     fun replaceFragment(fragment: Fragment) {
-
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_main_container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
-
     }
 
     fun firstRun() {
-
-        replaceFragment( ProfileFragment() )
-        binding.bottomNavigationMain.selectedItemId = R.id.menu_profile
-
+        replaceFragment( HomeFragment() )
+        binding.bottomNavigationMain.selectedItemId = R.id.menu_home
     }
 
 }

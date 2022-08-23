@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.countries.R
 import com.example.countries.databinding.ActivityLoginBinding
 import com.example.countries.ui.fragments.ProfileFragment
 import com.example.countries.ui.ux.Person
@@ -12,7 +11,7 @@ import com.example.countries.ui.ux.Person
 const val SEND_PERSON_DATA_KEY = "PERSON_DATA_KEY"
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,12 +37,6 @@ class LoginActivity : AppCompatActivity() {
 
                 val fragment = ProfileFragment()
                 fragment.arguments = bundle
-
-                val transaction = supportFragmentManager.beginTransaction()
-                transaction.replace(R.id.frame_main_container, fragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
-
 
             } else {
                 Toast.makeText(this, "Please, fill out all!", Toast.LENGTH_SHORT).show()
