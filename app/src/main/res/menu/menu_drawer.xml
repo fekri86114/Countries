@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_internet"
+        android:icon="@drawable/ic_internet"
+        android:title="Internet" />
+
+    <item android:title="More...">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_companies"
+                android:icon="@drawable/ic_company"
+                android:title="Companies" />
+
+            <item
+                android:id="@+id/menu_open_site_travel"
+                android:icon="@drawable/ic_search_airplain"
+                android:title="Travel sites" />
+
+            <item
+                android:id="@+id/menu_about_countries"
+                android:icon="@drawable/ic_about"
+                android:title="About countries" />
+
+        </menu>
+
+    </item>
+
+
+</menu>
