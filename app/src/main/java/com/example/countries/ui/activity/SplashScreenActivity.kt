@@ -18,7 +18,7 @@ class SplashScreenActivity: AppCompatActivity() {
         setContentView(binding.root)
 
         Handler().postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000) // 1000 mil. == 1 sec.
