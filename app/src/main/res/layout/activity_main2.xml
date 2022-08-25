@@ -7,18 +7,19 @@
     tools:context=".MainActivity2">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            app:title="Hello World!"
+            android:id="@+id/collapsing_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.MaterialComponents"
             app:contentScrim="@color/blue"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:id="@+id/collapsing_main">
+            app:title="Hello World!">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -83,5 +84,14 @@ Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, sus
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_search"
+        android:id="@+id/fab_main"
+        app:layout_anchor="@id/appbar_main"
+        app:layout_anchorGravity="bottom|end"
+        app:useCompatPadding="true"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

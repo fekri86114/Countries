@@ -1,5 +1,6 @@
 package com.example.countries
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -25,6 +26,8 @@ class MainActivity2 : AppCompatActivity() {
         // set back item to app
         supportActionBar!!.setHomeButtonEnabled(true)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+
 
     }
 
