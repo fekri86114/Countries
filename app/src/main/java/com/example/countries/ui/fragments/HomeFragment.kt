@@ -133,5 +133,4 @@ class HomeFragment : Fragment() {
         binding.recyclerHome.adapter = myAdapter
 
     }
-
 }
