@@ -9,7 +9,7 @@ import com.example.countries.R
 import com.example.countries.databinding.ItemHomeBinding
 import com.example.countries.ui.ux.data.CountriesItem
 
-class HomeAdapter(private val data: ArrayList<CountriesItem>) :
+class HomeAdapter(private val data: ArrayList<CountriesItem>, val itemEvents: ItemEvents) :
     RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
     lateinit var binding: ItemHomeBinding
 
@@ -37,6 +37,10 @@ class HomeAdapter(private val data: ArrayList<CountriesItem>) :
             binding.txtExploreTitle.text = countriesItem.countryName
             binding.txtHomeSubtitle.text = countriesItem.governmentType
             binding.txtExploreDetail.text = countriesItem.aboutCountry
+
+            itemView.setOnClickListener {
+                itemEvents.onItemClicked(countriesItem)
+            }
 
         }
     }
