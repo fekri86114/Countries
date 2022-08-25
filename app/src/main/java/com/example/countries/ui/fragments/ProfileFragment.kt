@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.countries.databinding.FragmentProfileBinding
-import com.example.countries.ui.activity.SEND_PERSON_DATA_KEY
-import com.example.countries.ui.ux.Person
 
 class ProfileFragment : Fragment() {
     lateinit var binding: FragmentProfileBinding
@@ -23,26 +21,6 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val bundle = arguments
-
-        if (bundle != null) {
-
-            val person = bundle.getParcelable<Person>(SEND_PERSON_DATA_KEY)!!
-
-            binding.txtPersonName.text = person.name
-            binding.txtPersonJobPosition.text = person.aboutPerson
-            binding.txtAboutPerson.text = person.aboutPerson
-            binding.txtPersonAge.text = person.age
-
-        } else {
-
-            binding.txtPersonName.text = "No information sent!"
-            binding.txtPersonJobPosition.text = "No information sent!"
-            binding.txtAboutPerson.text = "No information sent!"
-            binding.txtPersonAge.text = "No information sent!"
-
-        }
 
     }
 
