@@ -24,7 +24,7 @@ class HomeAdapter(private val data: ArrayList<CountriesItem>, val itemEvents: It
 
             Glide
                 .with(itemView.context)
-                .load(countriesItem.imgUniversityUrl)
+                .load(countriesItem.imgUniversity2Url)
                 .error(R.drawable.broken_img)
                 .into(binding.imgShowUniversity1)
 

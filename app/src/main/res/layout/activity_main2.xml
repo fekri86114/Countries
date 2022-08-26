@@ -45,7 +45,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -62,16 +62,16 @@
                 android:id="@+id/txt_government_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="Lorem Ipsum"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="100dp"
                 android:layout_height="1dp"
-                android:background="@color/gray_light"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:background="@color/gray_light" />
 
             <TextView
                 android:id="@+id/txt_about_country"
@@ -80,112 +80,154 @@
                 android:layout_marginTop="8dp"
                 android:lineSpacingExtra="5dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc.
-
 Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor."
                 android:textColor="@color/light_black" />
 
             <View
                 android:layout_width="100dp"
                 android:layout_height="1dp"
-                android:background="@color/gray_light"
                 android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginBottom="16dp"
+                android:background="@color/gray_light" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Universities..."
-                android:textStyle="bold"
+                android:textColor="@color/light_black"
                 android:textSize="20sp"
-                android:textColor="@color/light_black"/>
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:weightSum="5"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp"
-                    android:layout_margin="4dp">
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
 
                     <ImageView
                         android:id="@+id/img_university_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_launcher_background"/>
+                        android:background="@drawable/ic_launcher_background"
+                        android:scaleType="fitXY" />
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp"
-                    android:layout_margin="4dp">
-
-                    <ImageView android:id="@+id/img_university_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_launcher_background"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
                     android:layout_margin="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     app:cardCornerRadius="8dp">
 
-                    <ImageView android:id="@+id/img_university_3"
+                    <ImageView
+                        android:id="@+id/img_university_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_launcher_background"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    app:cardCornerRadius="8dp"
-                    android:layout_margin="4dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView android:id="@+id/img_university_4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_launcher_background"/>
+                        android:background="@drawable/ic_launcher_background"
+                        android:scaleType="fitXY" />
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp"
-                    android:layout_margin="8dp">
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
 
-                    <ImageView android:id="@+id/img_university_5"
+                    <ImageView
+                        android:id="@+id/img_university_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/ic_launcher_background"/>
+                        android:background="@drawable/ic_launcher_background"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View..."
+                android:textColor="@color/light_black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/img_nature_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_launcher_background"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/img_nature_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_launcher_background"
+                        android:scaleType="fitXY" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="8dp">
+
+                    <ImageView
+                        android:id="@+id/img_nature_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_launcher_background"
+                        android:scaleType="fitXY" />
 
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
         </LinearLayout>
-
-
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_open_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_search"
-        android:id="@+id/fab_main"
         app:layout_anchor="@id/appbar_main"
         app:layout_anchorGravity="bottom|end"
-        app:useCompatPadding="true"/>
+        app:useCompatPadding="true" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

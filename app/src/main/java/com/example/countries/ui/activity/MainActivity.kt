@@ -1,9 +1,13 @@
 package com.example.countries.ui.activity
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.example.countries.R
 import com.example.countries.databinding.ActivityMainBinding
@@ -11,6 +15,7 @@ import com.example.countries.ui.fragments.HomeFragment
 import com.example.countries.ui.fragments.InternetFragment
 import com.example.countries.ui.fragments.ProfileFragment
 import com.example.countries.ui.fragments.SearchFragment
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -35,21 +40,9 @@ class MainActivity : AppCompatActivity() {
         binding.navigationViewMin.setNavigationItemSelectedListener {
 
             when (it.itemId) {
-
-                R.id.menu_internet -> {
-                    Toast.makeText(this, "Internet", Toast.LENGTH_SHORT).show()
-                }
-
-                R.id.menu_companies -> {
-                    Toast.makeText(this, "Companies", Toast.LENGTH_SHORT).show()
-                }
-                R.id.menu_about_countries -> {
-                    Toast.makeText(this, "About Countries", Toast.LENGTH_SHORT).show()
-                }
                 R.id.menu_open_site_travel -> {
-                    Toast.makeText(this, "Uploading sites...", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(""))
                 }
-
             }
 
             true
@@ -78,7 +71,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        binding.bottomNavigationMain.setOnItemReselectedListener {  } // cancel reselect items
+        binding.bottomNavigationMain.setOnItemReselectedListener { } // cancel reselect items
     }
 
     fun replaceFragment(fragment: Fragment) {
@@ -89,7 +82,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun firstRun() {
-        replaceFragment( HomeFragment() )
+        replaceFragment(HomeFragment())
         binding.bottomNavigationMain.selectedItemId = R.id.menu_home
     }
 

@@ -1,6 +1,7 @@
 package com.example.countries.ui.activity
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -39,15 +40,55 @@ class MainActivity2 : AppCompatActivity() {
             .error(R.drawable.broken_img)
             .into(binding.imgActivity2Flag)
 
+        // Universities
         Glide
             .with(this)
-            .load(dataCountry.imgUniversityUrl)
+            .load(dataCountry.imgUniversity1Url)
             .error(R.drawable.broken_img)
             .into(binding.imgUniversity1)
+
+        Glide
+            .with(this)
+            .load(dataCountry.imgUniversity2Url)
+            .error(R.drawable.broken_img)
+            .into(binding.imgUniversity2)
+
+        Glide
+            .with(this)
+            .load(dataCountry.imgUniversity3Url)
+            .error(R.drawable.broken_img)
+            .into(binding.imgUniversity3)
+
+        // View (nature)
+        Glide
+            .with(this)
+            .load(dataCountry.imgNature1Url)
+            .error(R.drawable.broken_img)
+            .into(binding.imgNature1)
+
+        Glide
+            .with(this)
+            .load(dataCountry.imgNature2Url)
+            .error(R.drawable.broken_img)
+            .into(binding.imgNature2)
+
+        Glide
+            .with(this)
+            .load(dataCountry.imgNature3Url)
+            .error(R.drawable.broken_img)
+            .into(binding.imgNature3)
 
         binding.txtCountryName.text = dataCountry.countryName
         binding.txtAboutCountry.text = dataCountry.aboutCountry
         binding.txtGovernmentType.text = dataCountry.governmentType
+
+        binding.fabOpenWebsite.setOnClickListener {
+
+            val url = dataCountry.countrySite
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+
+        }
 
     }
 
